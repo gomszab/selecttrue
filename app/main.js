@@ -46,6 +46,6 @@ for(const elem of array){
     const card = new Card(elem.text, elem.right);
     managerArray.push(card);
 }
-
+const manager = new Manager(managerArray);
 const deckArea = new DeckArea('deck');
 const solutionArea = new SolutionArea('solution');
