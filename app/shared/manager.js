@@ -8,10 +8,14 @@ class Manager{
     #finishCallback
 
 
-    constructor(array){
+    constructor(array = []){
         this.#array = array;
         this.#solution = {}
         this.#currentCardNumber = 0;
+    }
+
+    add(card){
+        this.#array.push(card);
     }
 
     setNextCardCallback(callback){
