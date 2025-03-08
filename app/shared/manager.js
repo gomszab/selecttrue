@@ -6,16 +6,19 @@ class Manager{
     #nextCardCallback
     #appanedCardToSolution
     #finishCallback
+    #addCallback;
 
 
     constructor(array = []){
         this.#array = array;
         this.#solution = {}
         this.#currentCardNumber = 0;
+        this.#addCallback = () => {}
     }
 
     add(card){
         this.#array.push(card);
+        this.#addCallback(card);
     }
 
     setNextCardCallback(callback){
@@ -28,6 +31,10 @@ class Manager{
 
     setFinishCallback(callback){
         this.#finishCallback = callback;
+    }
+
+    setAddCallback(callback){
+        this.#addCallback = callback;
     }
 
 

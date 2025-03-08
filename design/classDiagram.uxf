@@ -1,45 +1,47 @@
-<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>44</y><w>462</w><h>121</h></coordinates><panel_attributes>Card
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>176</y><w>462</w><h>121</h></coordinates><panel_attributes>Card
 --
 &lt;&lt;get&gt;&gt; - text: String
 &lt;&lt;get&gt;&gt; - correct: boolean
 --
 + constructor(text: String, correct: boolean)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>748</x><y>341</y><w>396</w><h>242</h></coordinates><panel_attributes>Manager
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>748</x><y>440</y><w>429</w><h>275</h></coordinates><panel_attributes>Manager
 --
 - currentCardNumber: number
 - solution: Object
 - nextCardCallback: NextCardCallback
 - appendCardToSolution: AppendCardToSolutionCallback
 - finishCallback: FinishCallback
+- addCallback: AddCallback
 --
 + constructor(Card[])
 + setNextCardCallback(cb: NextCardCallback) : void
 + setAppendCardToSolution(cb:  AppendCardToSolutionCallback): void
 + setFinishCallback(cb: FinishCallback): void
++setAddcallback(cb: AddCallback): void
 + nextCard(answer: string): void
 + start(): void
-+ add(card: Card): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>99</y><w>319</w><h>407</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
++ add(card: Card): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>231</y><w>319</w><h>407</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
 array
-m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>671</y><w>407</w><h>121</h></coordinates><panel_attributes>Area
+m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>803</y><w>407</w><h>121</h></coordinates><panel_attributes>Area
 --
 &lt;&lt;get&gt;&gt; - div: HtmlDivElement
 --
 + constructor(cssClass: string, manager: Manager)
 - getContainer(): HtmlDivElement
 - finishCallback(divContainer: HtmlDivElement): FinishCallback
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>825</y><w>341</w><h>121</h></coordinates><panel_attributes>DeckArea
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>957</y><w>341</w><h>121</h></coordinates><panel_attributes>DeckArea
 --
 + constructor(className: sring, manager: Manager)
 - nextCardCallback(): NextCardCallback
-- clickOnCardOrSkip(): EventListenerCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1232</x><y>814</y><w>330</w><h>99</h></coordinates><panel_attributes>SolutionArea
+- clickOnCardOrSkip(): EventListenerCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1232</x><y>946</y><w>330</w><h>99</h></coordinates><panel_attributes>SolutionArea
 --
 + constructor(className: sring, manager: Manager)
-- appendCardToSolution(): AppendCardToSolutionCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>572</y><w>330</w><h>275</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>280;10;280;30;10;30;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>1067</x><y>572</y><w>385</w><h>264</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;40;330;40;330;220</additional_attributes></element><element><id>Relation</id><coordinates><x>935</x><y>572</y><w>33</w><h>121</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>935</x><y>781</y><w>319</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;270;80</additional_attributes></element><element><id>Relation</id><coordinates><x>682</x><y>781</y><w>242</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>200;10;200;80;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1133</x><y>396</y><w>319</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;170;70;170;10;270;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1430</x><y>330</y><w>715</w><h>209</h></coordinates><panel_attributes>FormController
+- appendCardToSolution(): AppendCardToSolutionCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>704</y><w>330</w><h>275</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>280;10;280;30;10;30;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>1067</x><y>704</y><w>385</w><h>264</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;40;330;40;330;220</additional_attributes></element><element><id>Relation</id><coordinates><x>935</x><y>704</y><w>33</w><h>121</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>935</x><y>913</y><w>319</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;270;80</additional_attributes></element><element><id>Relation</id><coordinates><x>682</x><y>913</y><w>242</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>200;10;200;80;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1166</x><y>528</y><w>286</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;140;70;140;10;240;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1430</x><y>462</y><w>715</w><h>209</h></coordinates><panel_attributes>FormController
 --
 - submitCallback(): EventListenerCallback
 - validateFields(): boolean
 - getValueObject(): {cardtext: string, right: boolean}
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2365</x><y>55</y><w>495</w><h>242</h></coordinates><panel_attributes>FormField
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2365</x><y>187</y><w>495</w><h>242</h></coordinates><panel_attributes>FormField
 --
 &lt;&lt;get&gt;&gt; - id: string
 &lt;&lt;get&gt;&gt; - optional: boolean
@@ -51,6 +53,10 @@ m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</add
 &lt;&lt;set&gt;&gt;error(value:string)
 --
 + constructor(id: string, labelContent: string, type: string, optional?: boolean)
-+ getDivElement(): HtmlDivElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2134</x><y>132</y><w>253</w><h>319</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
++ getDivElement(): HtmlDivElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2134</x><y>264</y><w>253</w><h>319</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
 formFieldArray
-m1= *</panel_attributes><additional_attributes>210;10;80;10;80;270;10;270</additional_attributes></element></diagram>
+m1= *</panel_attributes><additional_attributes>210;10;80;10;80;270;10;270</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1309</x><y>88</y><w>363</w><h>121</h></coordinates><panel_attributes>Table
+--
+- adminCallback(tbody: HtmlDivElement): AddAdminCallback
+--
++ constructor(manager: Manager)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1166</x><y>110</y><w>165</w><h>429</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;370;30;370;30;10;130;10</additional_attributes></element></diagram>
