@@ -57,6 +57,6 @@ m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</add
 formFieldArray
 m1= *</panel_attributes><additional_attributes>210;10;80;10;80;270;10;270</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1309</x><y>88</y><w>363</w><h>121</h></coordinates><panel_attributes>Table
 --
-- adminCallback(tbody: HtmlDivElement): AddAdminCallback
+- addCallback(tbody: HtmlDivElement): AddAdminCallback
 --
 + constructor(manager: Manager)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1166</x><y>110</y><w>165</w><h>429</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;370;30;370;30;10;130;10</additional_attributes></element></diagram>

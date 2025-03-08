@@ -37,6 +37,14 @@ class Manager{
         this.#addCallback = callback;
     }
 
+    generateExportText(){
+        const result = [];
+        for(const card of this.#array){
+            const correct = card.correct ? '1' : '0'; 
+            result.push(`${card.text};${correct}`);
+        }
+        return result.join('\n');
+    }
 
     nextCard(answer){
         if(answer){ 
